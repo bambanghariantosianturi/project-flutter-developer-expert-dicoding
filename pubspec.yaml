@@ -41,6 +41,7 @@ dependencies:
   flutter_bloc: ^8.1.3
   firebase_core: ^2.17.0
   firebase_crashlytics: ^3.3.7
+  firebase_analytics: ^10.5.1
 
   about:
     path: about
@@ -52,7 +53,6 @@ dependencies:
     path: movies
   tvseries:
     path: tvseries
-  firebase_analytics: ^10.5.1
 
 dev_dependencies:
   mockito: ^5.4.2
