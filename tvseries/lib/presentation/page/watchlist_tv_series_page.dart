@@ -7,7 +7,6 @@ import 'package:provider/provider.dart';
 import 'package:tvseries/presentation/page/tv_series_detail_page.dart';
 
 import '../bloc/watchlist/watchlist_tv_series_bloc.dart';
-import '../provider/watchlist_tv_series_notifier.dart';
 
 class WatchlistTvSeriesPage extends StatefulWidget {
   static const ROUTE_NAME = '/watchlist-tv-series-page';

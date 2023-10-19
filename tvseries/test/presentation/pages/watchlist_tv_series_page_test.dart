@@ -70,8 +70,11 @@ void main() {
         .thenReturn(const WatchlistTvSeriesError('Error message'));
 
     final textFinder = find.byKey(const Key('error_message'));
-
-    await tester.pumpWidget(makeTestableWidget(const WatchlistTvSeriesPage()));
+    await tester.pumpWidget(
+      MaterialApp(
+        home: makeTestableWidget(const WatchlistTvSeriesPage()),
+      ),
+    );
 
     expect(textFinder, findsOneWidget);
   });

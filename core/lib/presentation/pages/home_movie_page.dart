@@ -1,6 +1,7 @@
 import 'package:about/about_page.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:core/presentation/pages/watchlist_page.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies/presentation/bloc/nowplaying/now_playing_movies_bloc.dart';
@@ -24,6 +25,8 @@ class HomeMoviePage extends StatefulWidget {
 }
 
 class _HomeMoviePageState extends State<HomeMoviePage> {
+  final FirebaseAnalytics analytics = FirebaseAnalytics.instance;
+
   @override
   void initState() {
     super.initState();
@@ -34,6 +37,9 @@ class _HomeMoviePageState extends State<HomeMoviePage> {
         context.read<TopRatedMoviesBloc>().add(FetchTopRatedMovies());
       },
     );
+
+    analytics.setAnalyticsCollectionEnabled(true);
+    analytics.logEvent(name: "start");
   }
 
   @override

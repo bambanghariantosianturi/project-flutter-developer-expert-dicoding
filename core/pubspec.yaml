@@ -26,7 +26,7 @@ dependencies:
   cached_network_image: ^3.1.0
   http: ^1.1.0
   firebase_crashlytics: ^3.0.6
-
+  firebase_analytics: ^10.6.0
 
   cupertino_icons: ^1.0.6
   provider: ^6.0.5

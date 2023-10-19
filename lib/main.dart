@@ -6,6 +6,7 @@ import 'package:core/utils/http_ssl_pinning.dart';
 import 'package:core/utils/utils.dart';
 import 'package:ditonton/firebase_options.dart';
 import 'package:ditonton/injection.dart' as di;
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/cupertino.dart';
@@ -49,6 +50,10 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
+  static FirebaseAnalytics analytics = FirebaseAnalytics.instance;
+  static FirebaseAnalyticsObserver observer =
+      FirebaseAnalyticsObserver(analytics: analytics);
+
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
@@ -92,7 +97,9 @@ class MyApp extends StatelessWidget {
         BlocProvider(
           create: (context) => di.locator<SearchBloc>(),
         ),
-        BlocProvider(create: (context) => di.locator<SearchTvSeriesBloc>(),),
+        BlocProvider(
+          create: (context) => di.locator<SearchTvSeriesBloc>(),
+        ),
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
