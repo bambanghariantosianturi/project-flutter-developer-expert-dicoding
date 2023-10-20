@@ -5,6 +5,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:tvseries/presentation/bloc/watchlist/watchlist_tv_series_bloc.dart';
 import 'package:tvseries/presentation/page/watchlist_tv_series_page.dart';
+
 import '../../dummy_data/tvseries/dummy_objects.dart';
 
 class MockWatchlistTvSeriesBloc
@@ -70,10 +71,9 @@ void main() {
         .thenReturn(const WatchlistTvSeriesError('Error message'));
 
     final textFinder = find.byKey(const Key('error_message'));
+
     await tester.pumpWidget(
-      MaterialApp(
-        home: makeTestableWidget(const WatchlistTvSeriesPage()),
-      ),
+      makeTestableWidget(const WatchlistTvSeriesPage()),
     );
 
     expect(textFinder, findsOneWidget);

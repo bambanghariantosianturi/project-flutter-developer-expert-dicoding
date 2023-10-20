@@ -1,0 +1,3 @@
+workflows:
+  release-workflow:
+    name: Release
