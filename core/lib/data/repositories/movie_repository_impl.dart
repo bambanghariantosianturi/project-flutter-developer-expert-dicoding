@@ -53,7 +53,7 @@ class MovieRepositoryImpl implements MovieRepository {
     } on ServerException {
       return const Left(ServerFailure(''));
     } on SocketException {
-      return Left(ConnectionFailure('Failed to connect to the network'));
+      return const Left(ConnectionFailure('Failed to connect to the network'));
     }
   }
 
