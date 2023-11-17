@@ -11,7 +11,6 @@ import '../datasources/movie_local_data_source.dart';
 import '../datasources/movie_remote_data_source.dart';
 import '../models/movie_table.dart';
 
-
 class MovieRepositoryImpl implements MovieRepository {
   final MovieRemoteDataSource remoteDataSource;
   final MovieLocalDataSource localDataSource;
