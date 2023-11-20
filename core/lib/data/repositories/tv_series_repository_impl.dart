@@ -24,7 +24,7 @@ class TvSeriesRepositoryImpl extends TvSeriesRepository {
       final result = await remoteDataSource.getNowPlayingTvSeries();
       return Right(result.map((model) => model.toEntity()).toList());
     } on ServerException {
-      return Left(ServerFailure(''));
+      return const Left(ServerFailure(''));
     } on SocketException {
       return Left(ConnectionFailure('Failed to connect to the network'));
     }
