@@ -202,7 +202,7 @@ class DetailContent extends StatelessWidget {
                             Text(
                               tvSeries.overview,
                             ),
-                            SizedBox(height: 16),
+                            const SizedBox(height: 16),
                             Text(
                               'Seasons',
                               style: kHeading6,
