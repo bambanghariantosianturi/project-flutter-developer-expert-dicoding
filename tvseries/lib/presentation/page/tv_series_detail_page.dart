@@ -237,7 +237,7 @@ class DetailContent extends StatelessWidget {
                                 }).toList(),
                               ),
                             ),
-                            SizedBox(height: 16),
+                            const SizedBox(height: 16),
                             Text(
                               'Recommendations',
                               style: kHeading6,
