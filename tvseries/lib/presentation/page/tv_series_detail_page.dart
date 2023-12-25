@@ -267,11 +267,11 @@ class DetailContent extends StatelessWidget {
                                       borderRadius: BorderRadius.circular(8),
                                     ),
                                     height: 150,
-                                    child: Center(
+                                    child: const Center(
                                       child: Column(
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
-                                        children: const [
+                                        children: [
                                           Icon(Icons.tv_off),
                                           SizedBox(height: 2),
                                           Text('No Recommendations'),
