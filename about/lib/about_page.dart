@@ -30,6 +30,7 @@ class AboutPage extends StatelessWidget {
                   padding: const EdgeInsets.all(32.0),
                   // color: const Color(0xFFffc300),
                   color: kMikadoYellow,
+                  //content about
                   child: const Text(
                     'Ditonton merupakan sebuah aplikasi katalog film yang dikembangkan oleh Dicoding Indonesia sebagai contoh proyek aplikasi untuk kelas Menjadi Flutter Developer Expert.',
                     style: TextStyle(color: Colors.black87, fontSize: 16),
